@@ -8,7 +8,7 @@
 
 import sys
 from github import Github, UnknownObjectException
-from flask import Flask,jsonify,abort,make_response
+from flask import Flask,abort,make_response
 
 app = Flask(__name__)
 
