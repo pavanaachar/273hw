@@ -4,5 +4,6 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python","git_app.py"]
-CMD ["http://github.com/pavanaachar/273hw"]
+CMD ["http://github.com/pavanaachar/config-repo"]
+
 
