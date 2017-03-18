@@ -1,6 +1,3 @@
 flask
 PyGithub
-abort
-make_response
-json
 PyYAML
