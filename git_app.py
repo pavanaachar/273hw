@@ -1,7 +1,14 @@
+# git_app.py
+#
+# A flask application to retrieve and display .yml or .json config files.
+#
+# Author: Pavana Achar
+#
+# CMPE 273, Spring 2017
+
 import sys
 from github import Github, UnknownObjectException
 from flask import Flask,jsonify,abort,make_response
-import yaml,json
 
 app = Flask(__name__)
 
