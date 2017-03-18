@@ -12,7 +12,7 @@ repo = path[4]
 errstr = ""
 
 @app.route("/v1/<filename>")
-def hello(filename):
+def FetchFileContents(filename):
 	global errstr
 	try:
 		fileContent = Github().get_user(user).get_repo(repo).get_file_contents(filename).decoded_content
@@ -20,7 +20,6 @@ def hello(filename):
 		if filename.endswith('.yml') or filename.endswith('.json'):
 			return fileContent 
 		else:
-			print "hello"
 			raise TypeError()
 		
 	except UnknownObjectException:
