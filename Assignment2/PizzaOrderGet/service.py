@@ -33,6 +33,6 @@ def handler(event, context):
     resp_order['order_time'] = item['order_time']
 
     resp['order'] = resp_order
-    resp_dict['Message'] = resp
+    #resp_dict['Message'] = resp
 
-    return resp_dict
+    return resp
