@@ -7,11 +7,13 @@ from botocore.exceptions import ClientError
 def handler(event, context):
     table = boto3.resource('dynamodb', region_name='us-west-2').Table('PizzaMenu')
     try:
+        sequence = '["selection", "size"]'
+        event['sequence'] = json.loads(sequence)
         table.put_item(Item={"menu_id": event["menu_id"],
                              "store_name": event["store_name"],
                              "selection" : event["selection"],
                              "size": event["size"],
-                             "sequence": ["selection", "size"],
+                             "sequence": event['sequence'],
                              "price": event["price"],
                              "store_hours": event["store_hours"]
                                })
